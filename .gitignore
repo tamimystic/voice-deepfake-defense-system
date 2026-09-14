@@ -216,3 +216,36 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+data/
+data/**
+*.parquet
+artifacts/
+artifacts/**
+checkpoints/
+checkpoints/**
+models/saved/
+logs/
+*.flac
+*.wav
+*.mp3
+*.m4a
+*.ogg
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.zip
+*.tar
+*.tar.gz
+*.7z
+.kaggle/
+kaggle.json
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+scratch/
