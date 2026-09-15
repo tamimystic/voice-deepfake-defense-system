@@ -9,10 +9,8 @@ class CepstralFeatureExtractor:
         self.hop_length = hop_length or audio_config.hop_length
 
     def extract_lfcc(self, y: np.ndarray, sr: int = 16000) -> np.ndarray:
-        frames = librosa.util.frame(y, frame_length=self.n_fft, hop_length=self.hop_length)
-        window = np.hanning(self.n_fft)[:, None]
-        windowed_frames = frames * window
-        spectrum = np.abs(np.fft.rfft(windowed_frames, n=self.n_fft, axis=0))**2
+        stft = librosa.stft(y, n_fft=self.n_fft, hop_length=self.hop_length, center=True)
+        spectrum = np.abs(stft) ** 2
         n_bins = spectrum.shape[0]
         fbank = np.zeros((self.n_filters, n_bins))
         pts = np.linspace(0, n_bins - 1, self.n_filters + 2, dtype=int)
