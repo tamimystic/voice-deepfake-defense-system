@@ -78,7 +78,7 @@ Upon completion, all outputs are saved to `/kaggle/working/`:
 - **Training Trajectory**: `models/training_history.json`
 - **Benchmark Summary**: `experiment_final_report.json`
 - **Attack Vulnerability Table**: `attack_vulnerability_breakdown.csv`
-- **16 Publication-Grade Figures (300 DPI)** in `figures/`:
+- **15 Publication-Grade Figures (300 DPI)** in `figures/`:
   - `01_class_distribution_breakdown.png`
   - `02_attack_distribution_analysis.png`
   - `03_audio_duration_length_distribution.png`
