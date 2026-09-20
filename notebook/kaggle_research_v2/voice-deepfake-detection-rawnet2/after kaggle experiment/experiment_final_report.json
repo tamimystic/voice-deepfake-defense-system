@@ -1,0 +1,31 @@
+{
+  "study_metadata": {
+    "model_architecture": "RawNet2-Mini (SincNet + Feature Map Scaling FMS)",
+    "front_end_features": "Raw 1D Audio Waveform (64,000 samples @ 16 kHz)",
+    "input_tensor_shape": [
+      1,
+      1,
+      64000
+    ],
+    "dataset_benchmark": "ASVspoof 2019 Logical Access",
+    "training_epochs": 20,
+    "batch_size": 64,
+    "loss_function": "Focal Loss (alpha=0.75, gamma=2.0, label_smoothing=0.05)",
+    "optimizer": "AdamW (lr=1e-4, weight_decay=1e-4) with Cosine Annealing"
+  },
+  "development_partition_results": {
+    "eer_percent": 0.466,
+    "normalized_min_tdcf": 0.0556,
+    "roc_auc": 0.9999,
+    "calibrated_decision_threshold": 0.8197,
+    "total_utterances": 24844
+  },
+  "evaluation_partition_results": {
+    "eer_percent": 11.655,
+    "normalized_min_tdcf": 0.6083,
+    "roc_auc": 0.955,
+    "overall_accuracy_percent": 61.96,
+    "overall_f1_score": 0.731,
+    "total_utterances": 71237
+  }
+}
