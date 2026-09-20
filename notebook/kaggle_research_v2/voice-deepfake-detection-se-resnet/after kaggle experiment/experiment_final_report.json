@@ -1,0 +1,31 @@
+{
+  "study_metadata": {
+    "model_architecture": "SE-ResNet-18 (Squeeze-and-Excitation ResNet)",
+    "front_end_features": "128-channel Log-Mel Spectrogram (Pre-emphasis + Standardization)",
+    "input_tensor_shape": [
+      1,
+      128,
+      251
+    ],
+    "dataset_benchmark": "ASVspoof 2019 Logical Access",
+    "training_epochs": 20,
+    "batch_size": 64,
+    "loss_function": "Focal Loss (alpha=0.75, gamma=2.0, label_smoothing=0.05)",
+    "optimizer": "AdamW (lr=5e-4, weight_decay=1e-4) with Cosine Annealing"
+  },
+  "development_partition_results": {
+    "eer_percent": 0.064,
+    "normalized_min_tdcf": 0.0005,
+    "roc_auc": 1.0,
+    "calibrated_decision_threshold": 0.644,
+    "total_utterances": 24844
+  },
+  "evaluation_partition_results": {
+    "eer_percent": 23.818,
+    "normalized_min_tdcf": 0.5819,
+    "roc_auc": 0.844,
+    "overall_accuracy_percent": 54.63,
+    "overall_f1_score": 0.6615,
+    "total_utterances": 71237
+  }
+}
